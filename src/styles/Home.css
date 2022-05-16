@@ -1,0 +1,59 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    background-image: url("../image/back/travel.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.div_home{
+    animation: fadeInLeft 2s;
+}
+
+h1{
+    font-family: 'SDSamliphopangche_Outline';
+    text-shadow: 4px 2px 2px gray;
+}
+
+p{
+    font-weight: bold;
+    color: white;
+}
+
+@keyframes scroll {
+    from{
+        background-position: left calc(4.84*min(100vh, 750px)) top 0px;
+    }
+    to{
+        background-position: top 0px left 0px;
+    }
+}
+
+@keyframes fadeInLeft {
+    0%{
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@font-face {
+    font-family: 'Cafe24Oneprettynight';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Oneprettynight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SDSamliphopangche_Outline';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/SDSamliphopangche_Outline.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

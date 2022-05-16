@@ -1,0 +1,92 @@
+.res_h2{
+    font-size: 50px;
+    text-shadow: 3px 3px 3px red;
+}
+
+img{
+    border-radius: 50px;
+}
+
+.img_cls{
+    animation-name: grow-down;
+    animation-duration: 1s;
+}
+
+.res_p{
+    text-align: left;
+    text-shadow: 3px 3px 3px blue;
+    white-space: pre-line;
+}
+
+.parent{
+    height: 10em;
+    overflow-y: hidden;
+    display: block;
+}
+
+.child{
+    line-height: 1;
+    animation-name: grow;
+    animation-duration: 1s;
+}
+
+.res_ptag{
+    animation-name: fade-out;
+    animation-duration: 5s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes grow {
+    from{
+        transform: translateY(5em);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+
+@keyframes grow-down {
+    from{
+        transform: translateY(-5em);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+
+@keyframes fade-out {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes fade-out{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes fade-out{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+
+@-o-keyframes fade-out{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}

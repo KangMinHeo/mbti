@@ -1,0 +1,68 @@
+.btn{
+    display: inline-block;
+    padding: 1em 1.6em;
+    border-radius: 3px;
+    margin-top:2rem;
+    font-weight: bold;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    transition: all 250ms ease;
+}  
+.btn:hover{
+    color: white;
+}
+.btn:after{
+      animation-name: bgin;
+      transform: skew(-45deg) translate(-50%);
+}
+  
+.btn:after {
+    content: '';
+    z-index: -1;
+    width: 150%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    animation-name: bgout;
+    animation-duration:400ms;
+    transform: skew(-45deg) translate(-150%);
+}
+.btn--blue{
+    border: 1px solid #e5e7e4;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.1);
+    color: #505959;
+    letter-spacing: 2px;
+    padding: 1.2em 2.2em;
+}
+.btn--blue:after{
+    background: linear-gradient(to left, #00d2ff , #3a7bd5);
+}
+
+.btn--blue:hover{
+    color: #00d2ff;
+    box-shadow: 0 27px 55px rgba(0,0,0,0.3), 0 17px 17px rgba(0,0,0,0.15), 0 0 0 1px rgba(0,0,0,0);
+    border-color: #20A2E8;
+}
+
+@keyframes bgin{
+  from {
+    transform: skew(-45deg) translate(-150%);
+  }
+  to {
+    transform: skew(-45deg) translate(-50%);
+  }
+}
+@keyframes bgout{
+  from {
+    transform: skew(-45deg) translate(-50%);
+  }
+  to {
+    transform: skew(-45deg) translate(50%);
+  }
+}
